@@ -1,0 +1,75 @@
+@import '../../../scss/mixins';
+@import '../../../scss/mediaqueries';
+
+.card {
+  flex:1;
+  margin-left: 1.5rem;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color:#2e86de;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+  
+  &:hover {
+    transform: scale(1.05);
+    background-color: #0abde3;
+  }
+  @include respond-max(xs) {
+    margin-left: 0;
+    border-radius: 0;
+    padding: 0;
+    border-bottom: 1px dotted #55efc4;
+    transform: none;
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.card-grey {
+  &:first-child {
+    margin-left: 0;
+  }
+  p {
+    text-align: center;
+  }
+  .card-title, .card-value {
+    font-size: 2rem;
+    color:#000;
+    @include respond-max(xs) {
+      font-size: 1.8rem
+    }
+  }
+  .card-value {
+    color: #fff;
+  }
+  .card-procent {
+    color: #81ecec;
+    font-size: 1.2rem;
+    margin-left: 2rem
+  }
+}
+
+.card-white {
+  @include borderBox;
+  @include respond-max(xs) {
+    border-radius: .5rem;
+    border: 1px solid #0984e3;
+    padding: 0 2.5rem;
+    margin-top: 2rem;
+  }
+  margin-top: 1rem;
+  margin-left: 0;
+  background-color: transparent;
+  
+  h3 {
+    font-size: 2rem;
+    color: #636e72;
+  }
+  .card-value {
+    font-size: 5rem;
+    color:#0984e3;
+    text-align: center;
+    margin: 3rem 0;
+  }
+}

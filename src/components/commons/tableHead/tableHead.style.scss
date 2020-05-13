@@ -1,0 +1,61 @@
+@import '../../../scss/mediaqueries';
+
+.head {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  @include respond-max(xs) {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: -2rem;
+  }
+  li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color:#fff;
+    color: #2f3640;
+    font-size: 1.5rem;
+    font-weight: 700;
+    @include respond-max(xs) {
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
+  .cell {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    span {
+      &:first-child {
+        @include respond-max(xs) {
+          white-space: nowrap;
+          width: 7rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .tooltipHead {
+      display: none;
+      @include respond-max(xs) {
+        display: block;
+      }
+    }
+    
+    .sort {
+      cursor: pointer;
+      margin-left: .5rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      svg {
+        fill:#0984e3;
+      }
+    }
+  }
+}

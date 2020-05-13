@@ -1,0 +1,13 @@
+@import '../../../scss/mediaqueries';
+.update-date {
+  margin: 0 0 1rem 0;
+  font-style: italic;
+  color: #636e72;
+  span {
+    background-color: #ffeaa7;
+    padding: 0 .2rem;
+  }
+  @include respond-max(xs) {
+    text-align: center;
+  }
+}
